@@ -900,7 +900,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="5" drill="0">
+<clearance class="0" value="1"/>
 </class>
 </classes>
 <parts>
@@ -963,20 +964,24 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="B1" gate="G$1" pin="A0"/>
-<wire x1="73.66" y1="83.82" x2="60.96" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="83.82" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="91.44" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="TX"/>
 <wire x1="60.96" y1="35.56" x2="50.8" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="91.44" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="D7"/>
+<wire x1="104.14" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="RX"/>
 <wire x1="50.8" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="33.02" x2="71.12" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="B1" gate="G$1" pin="A1"/>
-<wire x1="71.12" y1="81.28" x2="73.66" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="33.02" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="88.9" x2="101.6" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="D8"/>
+<wire x1="101.6" y1="60.96" x2="99.06" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
