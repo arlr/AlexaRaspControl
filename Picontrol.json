@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "allume la lumière du bureau",
+            "invocationName": "lumière du bureau",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -37,7 +37,23 @@
                     ]
                 }
             ],
-            "types": []
+            "types": [
+                {
+                    "name": "onOff",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     }
 }
