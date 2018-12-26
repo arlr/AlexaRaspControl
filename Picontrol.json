@@ -1,0 +1,43 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "allume la lumière du bureau",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PowerIntent",
+                    "slots": [
+                        {
+                            "name": "onOffCommand",
+                            "type": "onOff",
+                            "samples": [
+                                "{onOffCommand}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "switch {onOffCommand}",
+                        "power {onOffCommand}",
+                        "turn {onOffCommand}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
