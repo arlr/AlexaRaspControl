@@ -11,8 +11,8 @@ SoftwareSerial hc05(RX , TX);
 void InitBL(){
   pinMode(TX, OUTPUT);
   pinMode(RX, INPUT);
-  hc05.begin(9600);
-  Serial.begin(9600);
+  hc05.begin(9600); //Speed
+  //Serial.begin(9600); 
   SetupBL();
 }
 
@@ -26,7 +26,7 @@ readBL(){
   char val;
   if(hc05.available){
     val = hc05.read()
-    if(val == '0'){
+    if(val == '0'){ //If transmission is 0 turn off the light.
       digitalWrite(RELAY,LOW);
     }
     if(val == '1'){
