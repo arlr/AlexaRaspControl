@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 #
 # Source : https://gist.github.com/keithweaver/3d5dbf38074cee4250c7d9807510c7c3
+# Flask explain : https://flask-ask.readthedocs.io/en/latest/requests.html !!!!!!! USEFUL
+
+
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, request, session, convert_errors
 import os, time
