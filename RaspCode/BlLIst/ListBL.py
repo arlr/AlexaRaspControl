@@ -6,13 +6,13 @@
 import bluetooth
 
 device = []
-i = 1
+
 nearby_devices = bluetooth.discover_devices(lookup_names=True)
 print("found %d devices" % len(nearby_devices))
 
 for addr, name in nearby_devices:
-    device[i] = name
+    device.append(name)
     print("  %s - %s" % (addr, name))
-    i = i + 1
+    
 
 print(device)
