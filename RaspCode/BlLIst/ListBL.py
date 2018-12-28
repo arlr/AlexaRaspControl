@@ -14,4 +14,4 @@ for addr, name in nearby_devices:
     device = name
     print("  %s - %s" % (addr, name))
 
-print(list)
+print(device)
