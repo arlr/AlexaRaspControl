@@ -15,26 +15,19 @@ ask = Ask(app, '/')
 
 @ask.launch
 def start_skill():
-    welcome_message = render_template('welcome')
-return question(welcome_message)
+    welcome_message = render_template('Bonjour, bienvenue que voulez vous faire ?')  #Message que vas dire Alexa
+    return question(welcome_message)
 
-@ask.intent('AMAZON.HelpIntent')
-def help():
-return start_skill()
-
-@ask.intent('AMAZON.FallbackIntent')
-def fallback():
-    fallback_message = render_template('fallback_message')
-    return statement(fallback_message)
+@ask.intent('BlListIntent')
+def power(onOffCommand):
+    
+    return statement(text).simple_card('Status :', text)
 
 @ask.session_ended
 def session_ended():
-return "{}", 200
+    return "{}", 200
 
-@ask.intent('PowerIntent')
-def power(onOffCommand):
-    text = render_template('power_on') if onOffCommand == "on" else render_template('power_off')
-return statement(text).simple_card('Status', text)
+
 
 
 #On Off command
