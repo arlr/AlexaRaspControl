@@ -6,7 +6,7 @@
 import bluetooth
 
 device = []
-i = 0
+i = 1
 nearby_devices = bluetooth.discover_devices(lookup_names=True)
 print("found %d devices" % len(nearby_devices))
 
