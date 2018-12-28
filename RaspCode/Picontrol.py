@@ -15,13 +15,13 @@ ask = Ask(app, '/')
 
 @ask.launch
 def start_skill():
-    welcome_message = render_template('Bonjour, bienvenue que voulez vous faire ?')  #Message que vas dire Alexa
+    welcome_message = render_template('Bonjour, que voulez vous faire ?')  #Message que vas dire Alexa
     return question(welcome_message)
 
-@ask.intent('BlListIntent')
-def power(onOffCommand):
-    
-    return statement(text).simple_card('Status :', text)
+@ask.intent('BlScanIntent')
+def scan_bluetooth():
+    devices=os.system("Bl_Scripts/ListBL.py")
+    return statement('Les appareils disponibles son :', devices)
 
 @ask.session_ended
 def session_ended():

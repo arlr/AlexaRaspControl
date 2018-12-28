@@ -3,6 +3,8 @@
 #Source : https://stackoverflow.com/questions/37465157/pairing-bluetooth-devices-with-passkey-password-in-python-rfcomm-linux
 #       : https://people.csail.mit.edu/albert/bluez-intro/x232.html
 
+#Faire attention au expaces dans le passage des parametres
+
 import sys
 
 device = sys.argv[1]    #Le nom de l'appareil a se conecter est donné en 1er Argument (L'argument 0 est le nom du script python)

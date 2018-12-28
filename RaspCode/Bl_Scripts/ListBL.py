@@ -16,4 +16,4 @@ for addr, name in nearby_devices:
     
 
 #print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
-sys.exit(device)
+sys.exit(device)    #Retourne la liste des appareils

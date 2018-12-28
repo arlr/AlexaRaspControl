@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "lumière du bureau",
+            "invocationName": "Panneau de control",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -20,37 +20,12 @@
                     "samples": []
                 },
                 {
-                    "name": "PowerIntent",
-                    "slots": [
-                        {
-                            "name": "onOffCommand",
-                            "type": "onOff",
-                            "samples": [
-                                "{onOffCommand}"
-                            ]
-                        }
-                    ],
+                    "name": "BlScanIntent",
+                    "slots": [],
                     "samples": [
-                        "switch {onOffCommand}",
-                        "power {onOffCommand}",
-                        "turn {onOffCommand}"
-                    ]
-                }
-            ],
-            "types": [
-                {
-                    "name": "onOff",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "off"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "on"
-                            }
-                        }
+                        "Fais un scan bluetooth",
+                        "Recherche les appareils bluetooth",
+                        "Fais une recherche bluetooth"
                     ]
                 }
             ]
