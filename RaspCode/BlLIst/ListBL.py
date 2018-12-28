@@ -4,7 +4,7 @@
 
 # simple inquiry example
 import bluetooth
-
+import sys
 device = []
 
 nearby_devices = bluetooth.discover_devices(lookup_names=True)
@@ -15,4 +15,5 @@ for addr, name in nearby_devices:
     print("  %s - %s" % (addr, name))
     
 
-print(device)
+#print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
+sys.exit(device)
