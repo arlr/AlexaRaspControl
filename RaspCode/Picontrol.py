@@ -11,11 +11,11 @@ import os, time ,sys, subprocess
 
 #Creation de l'app
 app = Flask(__name__)
-ask = Ask(app, '/')
+ask = Ask(app, '/PiControle')
 
 @ask.launch
 def start_skill():
-    welcome_message = render_template('Bonjour, que voulez vous faire ?')  #Message que vas dire Alexa
+    welcome_message = "Bonjour, que voulez vous faire ?"  #Message que vas dire Alexa
     return question(welcome_message)
 
 @ask.intent('BlScanIntent')
