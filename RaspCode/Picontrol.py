@@ -22,7 +22,6 @@ def start_skill():
 def scan_bluetooth():
     devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
     listeDevice=devices.stdout.decode('utf-8')
-    ":".join(listeDevice)
     return statement('Les appareils disponibles sont :', listeDevice)
 
 @ask.session_ended
