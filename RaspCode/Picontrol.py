@@ -7,7 +7,7 @@
 
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, request, session, convert_errors
-import os, time
+import os, time ,sys, subprocess
 
 #Creation de l'app
 app = Flask(__name__)
@@ -20,8 +20,10 @@ def start_skill():
 
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
-    devices=os.system("Bl_Scripts/ListBL.py")
-    return statement('Les appareils disponibles sont :', devices)
+    devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
+    listeDevice=devices.stdout.decode('utf-8')
+    ":".join(listeDevice)
+    return statement('Les appareils disponibles sont :', listeDevice)
 
 @ask.session_ended
 def session_ended():
