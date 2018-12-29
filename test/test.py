@@ -3,5 +3,5 @@ import os
 
 devices = []
 devices=os.system("python3 ../RaspCode/Bl_Scripts/ListBL.py")
-" ".join(devices)
-print('Les appareils sont : ' + devices)
+#" ".join(devices)
+print('Les appareils sont : ' + str(devices))
