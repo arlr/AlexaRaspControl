@@ -11,7 +11,11 @@ import os, time ,sys, subprocess
 
 #Creation de l'app
 app = Flask(__name__)
-ask = Ask(app, '/PiControle')
+ask = Ask(app, "/PiControle")
+
+@app.route('/')
+def homepage():
+    return "Page de la raspberry"
 
 @ask.launch
 def start_skill():
