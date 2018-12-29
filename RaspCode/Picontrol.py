@@ -21,7 +21,7 @@ def start_skill():
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
     devices=os.system("Bl_Scripts/ListBL.py")
-    return statement('Les appareils disponibles son :', devices)
+    return statement('Les appareils disponibles sont :', devices)
 
 @ask.session_ended
 def session_ended():
