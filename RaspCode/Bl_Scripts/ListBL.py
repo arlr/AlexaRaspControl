@@ -15,5 +15,5 @@ for addr, name in nearby_devices:
     print("  %s - %s" % (addr, name))
     
 
-#print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
+print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
 sys.exit(device)    #Retourne la liste des appareils
