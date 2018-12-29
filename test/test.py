@@ -3,9 +3,9 @@
 import os
 import subprocess
 
-devices = subprocess.Popen(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
-stdout_value=devices.communicate()
-devices.kill()
+devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
+
+stdout_value=devices.stdout.decode('utf-8')
+#devices.kill()
 print(stdout_value)
-#" ".join(devices)
-print('Les appareils sont : ' + str(stdout_value))
+print('Les appareils sont : ' + stdout_value)
