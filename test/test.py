@@ -3,7 +3,7 @@
 import os
 import subprocess
 
-devices = subprocess.Popen(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
+devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
 
 stdout_value=devices.stdout.decode('utf-8')
 #devices.kill()
