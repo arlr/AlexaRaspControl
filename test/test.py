@@ -2,4 +2,4 @@
 import os
 
 
-devices=os.system("python3 RaspCode/Bl_Scripts/ListBL.py")
+devices=os.system("python3 ../RaspCode/Bl_Scripts/ListBL.py")
