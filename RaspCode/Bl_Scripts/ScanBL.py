@@ -19,7 +19,6 @@ for addr, name in nearby_devices:
 SaveFile = open("BlSave.txt", "x")
 SaveFile.write(str(device))
 SaveFile.close()
-print(device)
 
 
 #sys.exit(device)    #Retourne la liste des appareils
