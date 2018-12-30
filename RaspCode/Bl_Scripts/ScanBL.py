@@ -4,7 +4,7 @@
 
 # simple inquiry example
 import bluetooth
-import sys
+import sys ,os
 device = []
 
 nearby_devices = bluetooth.discover_devices(lookup_names=True)
@@ -16,7 +16,8 @@ for addr, name in nearby_devices:
     
 
 #print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
-SaveFile = open("./BlSave.txt", "x")
+
+SaveFile = open("BlSave.txt", "w")
 SaveFile.write(str(device))
 SaveFile.close()
 
