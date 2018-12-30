@@ -19,16 +19,20 @@ for addr, name in nearby_devices:
 
 #Mise en forme string
 SizeList = len(device)
-last=device[-1]
-device.remove(last)
+if SizeList > 1 :
+    last=device[-1]
+    device.remove(last)
 
-",".join(device)
+    ",".join(device)
 
-result = str(device)
-result = result.replace("['",' ')
-result = result.replace("']",' ')
+    result = str(device)
+    result = result.replace("['",' ')
+    result = result.replace("']",' ')
 
-result = result + " et " + str(last)
+    result = result + " et " + str(last)
+else:
+    result = str(device)
+    
 SaveFile = open("BlSave.txt", "w")
 SaveFile.write(str(result))
 SaveFile.close()
