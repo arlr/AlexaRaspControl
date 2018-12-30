@@ -28,9 +28,9 @@ def scan_bluetooth():
 
 
     #Travaillé sur le problème du temp de réponse !!
-    #devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
-    #listeDevice=devices.stdout.decode('utf-8')
-    reponse = "Les appareils disponibles sont :" + str( 2+2)
+    devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
+    listeDevice=devices.stdout.decode('utf-8')
+    reponse = "Les appareils disponibles sont : " + str(listeDevice)
     return statement(reponse)
 
 @ask.session_ended
