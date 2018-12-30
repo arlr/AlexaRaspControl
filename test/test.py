@@ -3,10 +3,8 @@
 import os
 import subprocess
 
-devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
+subprocess.run(["python3", "../RaspCode/Bl_Scripts/ScanBL.py", "&"])
 
-stdout_value=devices.stdout.decode('utf-8')
-#devices.kill()
 #print(stdout_value)
 
-print('Les appareils sont : ' + stdout_value)
+

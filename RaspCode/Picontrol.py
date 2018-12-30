@@ -28,19 +28,28 @@ def start_skill():
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
     
-    subprocess.run(["python3", "../RaspCode/Bl_Scripts/ScanBL.py"])
+    subprocess.run(["python3", "../RaspCode/Bl_Scripts/ScanBL.py", "&"])
     reponse = "Scan en cour demandez les resultats un peu plus tard"
     return statement(reponse)
 
 @ask.intent('BlListeIntent')
 def list_bluetooth():
-    ListeFile = open("../Bl_Scripts/BlSave.txt", "r")
-    DeviceListe = ListeFile.read()
-    ListeFile.close()
-    reponse = "Les appareils disponibles sont : " + str(DeviceListe)
+    
+    if os.path.isfile("../Bl_Scripts/BlSave.txt"):
+        ListeFile = open("../Bl_Scripts/BlSave.txt", "r")
+        DeviceListe = ListeFile.read()
+        ListeFile.close()
+        reponse = "Les appareils disponibles sont : " + str(DeviceListe)
+   
+    else : 
+        reponse = "Aucun appareil trouvé"
+    
+    
+    if len(DeviceListe) == 0:
+        reponse = "Aucun appareil trouvé"
+    
+    print(reponse)
     return statement(reponse)
-
-
 
 
 
