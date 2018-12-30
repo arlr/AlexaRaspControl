@@ -6,6 +6,10 @@
 import bluetooth
 import sys ,os
 device = []
+SizeList = 0
+last = ""
+result = ""
+
 
 nearby_devices = bluetooth.discover_devices(lookup_names=True)
 #print("found %d devices" % len(nearby_devices))
@@ -16,9 +20,21 @@ for addr, name in nearby_devices:
     
 
 #print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
+SizeList = len(device)
+last=device[-1]
+device.remove(last)
 
+",".join(device)
+
+result = str(device)
+result = result.replace("['",' ')
+result = result.replace("']",' ')
+
+result = result + " et " + str(last)
 SaveFile = open("BlSave.txt", "w")
-SaveFile.write(str(device))
+SaveFile.write(str(result))
 SaveFile.close()
+
+print(result)
 
 #sys.exit(device)    #Retourne la liste des appareils

@@ -34,7 +34,8 @@
                     "samples": [
                         "Affiche les appareils bluetooth",
                         "Affiche le resultat du scan bluetooth",
-                        "Quel est le resultat du scan bluetooth"
+                        "Quel est le resultat du scan bluetooth",
+                        "Quels sont les résultats du dernier scann bluetooth"
                     ]
                 }
             ]
