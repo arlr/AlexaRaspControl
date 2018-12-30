@@ -28,8 +28,8 @@ def start_skill():
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
     
-    subprocess.Popen("python3 ../Bl_Scripts/ScanBL.py &",shell=True)
-    reponse = "Scann en cour. Demandez lé resultats un peu plu tard"
+    subprocess.Popen("python3 Bl_Scripts/ScanBL.py &",shell=True)
+    reponse = "Scann en cour. Demandez lè resultats un peu plu tard"
     return statement(reponse)
 
 @ask.intent('BlListeIntent')
