@@ -28,7 +28,9 @@ device.remove(last)
 result = str(device)
 result = result.replace("['",' ')
 result = result.replace("']",' ')
-
+#Cas liste vide
+result = result.replace("[",' ')
+result = result.replace("]",' ')
 result = result + " et " + str(last)
 
 SaveFile = open("BlSave.txt", "w")
