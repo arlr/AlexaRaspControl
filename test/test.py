@@ -2,7 +2,7 @@
 #https://www.developpez.net/forums/d956151/autres-langages/python-zope/general-python/recuperer-resultat-commandes-shell/
 #import bluetooth
 import sys ,os
-#device = ['Galaxy S9', '[TV] UE50JU6800']
+device = []
 SizeList = 0
 last = ""
 result = ""
