@@ -28,7 +28,7 @@ def start_skill():
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
     
-    subprocess.Popen("python3 Bl_Scripts/ScanBL.py &",shell=True)
+    os.system('python3 Bl_Scripts/ScanBL.py &')
     reponse = "Scann en cour. Demandez lè resultats un peu plu tard"
     return statement(reponse)
 
@@ -36,7 +36,7 @@ def scan_bluetooth():
 def list_bluetooth():
     
     if os.path.isfile("BlSave.txt"):
-        ListeFile = open("BlSave.txt", "r")
+        ListeFile = open("Bl_scripts/BlSave.txt", "r")
         DeviceListe = ListeFile.read()
         ListeFile.close()
         reponse = "Les appareils disponibles sont : " + str(DeviceListe)
