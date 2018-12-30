@@ -17,7 +17,7 @@ for addr, name in nearby_devices:
 
 #print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
 SaveFile = open("BlSave.txt", "x")
-SaveFile.write(str(device)
+SaveFile.write(str(device))
 SaveFile.close()
 print(device)
 
