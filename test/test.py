@@ -3,7 +3,11 @@
 import os
 import subprocess
 
-subprocess.run(["python3", "../RaspCode/Bl_Scripts/ScanBL.py", "&"])
+device = [1,5,9,8,7]
+
+SaveFile = open("BlSave.txt", "x")
+SaveFile.write(str(device)
+SaveFile.close()
 
 #print(stdout_value)
 
