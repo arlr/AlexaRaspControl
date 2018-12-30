@@ -6,7 +6,7 @@
 import bluetooth
 import sys ,os
 device = []
-
+SizeList = 0
 last = ""
 result = ""
 
@@ -19,24 +19,26 @@ for addr, name in nearby_devices:
   #  print("  %s - %s" % (addr, name))
     
 
-#print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
-last=device[-1]
-device.remove(last)
+#Mise en forme string
+SizeList = len(device)
+if SizeList > 1 :
+    last=device[-1]
+    device.remove(last)
 
-",".join(device)
+    ",".join(device)
 
-result = str(device)
-result = result.replace("['",' ')
-result = result.replace("']",' ')
-#Cas liste vide
-result = result.replace("[",'')
-result = result.replace("]",'')
-result = result + " et " + str(last)
+    result = str(device)
+    result = result.replace("['",' ')
+    result = result.replace("']",' ')
+
+    result = result + " et " + str(last)
+else:
+    result = str(device)
+    result = result.replace("['",' ')
+    result = result.replace("']",' ')
 
 SaveFile = open("BlSave.txt", "w")
 SaveFile.write(str(result))
 SaveFile.close()
 
-print(result)
-
-#sys.exit(device)    #Retourne la liste des appareils
+#print(result)
