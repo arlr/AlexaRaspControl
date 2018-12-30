@@ -7,7 +7,7 @@
 
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, request, session, convert_errors
-import os, time ,sys, subprocess
+import os, time ,sys
 
 #Creation de l'app
 app = Flask(__name__)
