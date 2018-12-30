@@ -24,7 +24,7 @@ def start_skill():
 
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
-    log.info("Request ID: {}".format(request.requestId))
+    #log.info("Request ID: {}".format(request.requestId))
 
 
     #Travaillé sur le problème du temp de réponse !!
