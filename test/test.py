@@ -2,16 +2,16 @@
 #https://www.developpez.net/forums/d956151/autres-langages/python-zope/general-python/recuperer-resultat-commandes-shell/
 #import bluetooth
 import sys ,os
-device = ['Galaxy S9', '[TV] UE50JU6800']
+#device = ['Galaxy S9', '[TV] UE50JU6800']
 SizeList = 0
 last = ""
 result = ""
 
-#nearby_devices = bluetooth.discover_devices(lookup_names=True)
+nearby_devices = bluetooth.discover_devices(lookup_names=True)
 #print("found %d devices" % len(nearby_devices))
 
-#for addr, name in nearby_devices:
-    #device.append(name)
+for addr, name in nearby_devices:
+    device.append(name)
   #  print("  %s - %s" % (addr, name))
     
 

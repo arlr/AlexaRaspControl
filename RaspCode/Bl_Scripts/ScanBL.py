@@ -6,7 +6,7 @@
 import bluetooth
 import sys ,os
 device = []
-SizeList = 0
+
 last = ""
 result = ""
 
@@ -20,7 +20,6 @@ for addr, name in nearby_devices:
     
 
 #print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
-SizeList = len(device)
 last=device[-1]
 device.remove(last)
 
@@ -31,6 +30,7 @@ result = result.replace("['",' ')
 result = result.replace("']",' ')
 
 result = result + " et " + str(last)
+
 SaveFile = open("BlSave.txt", "w")
 SaveFile.write(str(result))
 SaveFile.close()
