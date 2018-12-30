@@ -6,7 +6,7 @@ import subprocess
 device = [1,5,9,8,7]
 
 SaveFile = open("BlSave.txt", "x")
-SaveFile.write(str(device)
+SaveFile.write(str(device))
 SaveFile.close()
 
 #print(stdout_value)
