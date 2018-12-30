@@ -32,7 +32,9 @@ if SizeList > 1 :
     result = result + " et " + str(last)
 else:
     result = str(device)
-    
+    result = result.replace("['",' ')
+    result = result.replace("']",' ')
+
 SaveFile = open("BlSave.txt", "w")
 SaveFile.write(str(result))
 SaveFile.close()
