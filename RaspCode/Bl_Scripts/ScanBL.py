@@ -20,4 +20,6 @@ SaveFile = open("BlSave.txt", "w")
 SaveFile.write(device)
 SaveFile.close()
 print(device)
-sys.exit(device)    #Retourne la liste des appareils
+
+
+#sys.exit(device)    #Retourne la liste des appareils
