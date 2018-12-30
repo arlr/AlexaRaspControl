@@ -22,15 +22,22 @@ def start_skill():
     welcome_message = "Bonjour, que voulez vous faire ?"  #Message que vas dire Alexa
     return question(welcome_message)
 
+
+#================================ Bluetooths Intents ====================================
+
 @ask.intent('BlScanIntent')
 def scan_bluetooth():
-    #log.info("Request ID: {}".format(request.requestId))
+    
+    subprocess.run(["python3", "../RaspCode/Bl_Scripts/ScanBL.py"])
+    reponse = "Scan en cour demandez les resultats un peu plus tard"
+    return statement(reponse)
 
-
-    #Travaillé sur le problème du temp de réponse !!
-    devices = subprocess.run(["python3", "../RaspCode/Bl_Scripts/ListBL.py"],stdout=subprocess.PIPE)
-    listeDevice=devices.stdout.decode('utf-8')
-    reponse = "Les appareils disponibles sont : " + str(listeDevice)
+@ask.intent('BlListeIntent')
+def list_bluetooth():
+    ListeFile = open("../Bl_Scripts/BlSave.txt", "r")
+    DeviceListe = ListeFile.read()
+    ListeFile.close()
+    reponse = "Les appareils disponibles sont : " + str(DeviceListe)
     return statement(reponse)
 
 @ask.session_ended

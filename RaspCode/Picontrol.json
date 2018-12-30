@@ -27,6 +27,15 @@
                         "Recherche les appareils bluetooth",
                         "Fais une recherche bluetooth"
                     ]
+                },
+                {
+                    "name": "BlListeIntent",
+                    "slots": [],
+                    "samples": [
+                        "Affiche les appareils bluetooth",
+                        "Affiche le resultat du scan bluetooth",
+                        "Quel est le resultat du scan bluetooth"
+                    ]
                 }
             ]
         }

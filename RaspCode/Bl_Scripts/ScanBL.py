@@ -16,5 +16,8 @@ for addr, name in nearby_devices:
     
 
 #print(device)   #Affiche la liste dans la quelle se trouve les nom des interfaces
+SaveFile = open("BlSave.txt", "w")
+SaveFile.write(device)
+SaveFile.close()
 print(device)
 sys.exit(device)    #Retourne la liste des appareils
