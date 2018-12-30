@@ -40,6 +40,11 @@ def list_bluetooth():
     reponse = "Les appareils disponibles sont : " + str(DeviceListe)
     return statement(reponse)
 
+
+
+
+
+
 @ask.session_ended
 def session_ended():
     return "{}", 200
