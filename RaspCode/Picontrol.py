@@ -35,8 +35,8 @@ def scan_bluetooth():
 @ask.intent('BlListeIntent')
 def list_bluetooth():
     
-    if os.path.isfile("DataSaves/BlSave.txt"):
-        ListeFile = open("DataSaves/BlSave.txt", "r")
+    if os.path.isfile("BlSave.txt"):
+        ListeFile = open("BlSave.txt", "r")
         DeviceListe = ListeFile.read()
         ListeFile.close()
         reponse = "Les appareils disponibles sont : " + str(DeviceListe)
