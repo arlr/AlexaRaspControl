@@ -37,7 +37,7 @@ else:
     result = result.replace("['",' ')
     result = result.replace("']",' ')
 
-SaveFile = open("BlSave.txt", "w")
+SaveFile = open("DataSaves/BlSave.txt", "w")
 SaveFile.write(str(result))
 SaveFile.close()
 
