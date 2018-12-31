@@ -41,4 +41,4 @@ SaveFile = open("BlSave.txt", "w")
 SaveFile.write(str(result))
 SaveFile.close()
 
-#print(result)
+print("Scann bluetooth terminé : " + result)
