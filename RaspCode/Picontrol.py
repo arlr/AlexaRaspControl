@@ -30,7 +30,7 @@ def scan_bluetooth():
     #os.chdir('Bl_Scripts/')
     #os.system('python3 ScanBL.py &')
     #os.chdir('../')
-    subprocess.call(['python3', 'ScanBL.py', '&'], cwd='Bl_Scripts')
+    subprocess.Popen(['python3', 'ScanBL.py', '&'], cwd='Bl_Scripts')
     reponse = "Scann en cour. Demandez lè resultats un peu plu tard"
     return statement(reponse)
 
