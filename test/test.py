@@ -2,4 +2,4 @@
 #https://www.developpez.net/forums/d956151/autres-langages/python-zope/general-python/recuperer-resultat-commandes-shell/
 
 import sys ,subprocess
-subprocess.Popen("python3 ../RaspCode/Bl_Scripts/ScanBL.py &",shell=True)
+subprocess.call(['python3', 'ScanBL.py', '&'], cwd='../RaspCode/Bl_Scripts')
